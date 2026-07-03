@@ -1,0 +1,41 @@
+# DOUYlike 配置文件
+# 复制为 config.yaml 并填写你的配置
+
+douyin:
+  chrome_debug_port: 9222
+  user_data_dir: "%LOCALAPPDATA%/DyD_Chrome"
+  max_downloads_per_task: 100
+
+whisper:
+  model_size: "medium"
+  device: "cuda"
+  compute_type: "int8"
+  language: "zh"
+
+llm:
+  base_url: "https://api.openai.com/v1"
+  api_key: "sk-your-key-here"
+  model: "gpt-4o"
+  max_tokens: 4096
+  temperature: 0.7
+
+feishu:
+  app_id: "cli_xxxx"
+  app_secret: "xxxx"
+  bitable_app_token: ""
+  table_ids:
+    videos: ""
+    transcripts: ""
+    analysis: ""
+    topics: ""
+    competitors: ""
+    hotspots: ""
+    logs: ""
+
+scheduler:
+  enabled: true
+  interval_hours: 4
+  timezone: "Asia/Shanghai"
+
+dyd_path: "D:\\AI\\DyD下载器"
+data_dir: "data"

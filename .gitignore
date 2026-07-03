@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.env
+venv/
+.venv/
+
+# Data
+data/
+*.db
+
+# IDE
+.vscode/
+.idea/
+
+# Config (含密钥)
+config.yaml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Backup
+backup/
+*.zip
