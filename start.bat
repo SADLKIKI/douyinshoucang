@@ -1,5 +1,4 @@
 @echo off
-chcp 65001 >nul
 title DOUYlike
 cd /d "%~dp0"
 
@@ -7,25 +6,25 @@ cd /d "%~dp0"
 cls
 echo.
 echo  ============================================
-echo   DOUYlike - 抖音收藏夹自动更新系统
+echo   DOUYlike
 echo  ============================================
 echo.
-echo   [1] 执行完整流水线
-echo   [2] 仅采集收藏夹
-echo   [3] 仅转写逐字稿
-echo   [4] AI 纠错逐字稿
-echo   [5] 仅 AI 分析
-echo   [6] 仅同步飞书
-echo   [7] 查看统计信息
-echo   [8] 启动 Web 控制台
-echo   [9] 启动定时任务
-echo   [0] 退出
+echo   [1] Run full pipeline
+echo   [2] Collect favorites
+echo   [3] Transcribe videos
+echo   [4] AI fix typos
+echo   [5] AI analyze
+echo   [6] Sync to Feishu
+echo   [7] Show stats
+echo   [8] Start Web UI
+echo   [9] Run once (scheduled)
+echo   [0] Exit
 echo.
 echo  ============================================
 echo.
 
 set choice=
-set /p choice=  请输入选择:
+set /p choice=  Select:
 
 if "%choice%"=="1" goto run
 if "%choice%"=="2" goto collect
@@ -38,58 +37,50 @@ if "%choice%"=="8" goto webui
 if "%choice%"=="9" goto serve
 if "%choice%"=="0" goto quit
 
-echo.
-echo  [!] 无效选择，请重新输入
+echo Invalid choice
 ping 127.0.0.1 -n 2 >nul
 goto menu
 
 :run
 python main.py run
 echo.
-echo  按任意键返回菜单...
-pause >nul
+pause
 goto menu
 
 :collect
 python main.py collect
 echo.
-echo  按任意键返回菜单...
-pause >nul
+pause
 goto menu
 
 :transcribe
 python main.py transcribe
 echo.
-echo  按任意键返回菜单...
-pause >nul
+pause
 goto menu
 
 :fix
 python main.py fix-typos
 echo.
-echo  按任意键返回菜单...
-pause >nul
+pause
 goto menu
 
 :analyze
 python main.py analyze
 echo.
-echo  按任意键返回菜单...
-pause >nul
+pause
 goto menu
 
 :sync
 python main.py sync
 echo.
-echo  按任意键返回菜单...
-pause >nul
+pause
 goto menu
 
 :stats
 python main.py stats
 echo.
-echo  按任意键返回菜单...
-pause >nul
+pause
 goto menu
 
 :webui
@@ -100,8 +91,7 @@ goto menu
 :serve
 python main.py serve --once
 echo.
-echo  按任意键返回菜单...
-pause >nul
+pause
 goto menu
 
 :quit
