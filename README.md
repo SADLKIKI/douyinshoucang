@@ -185,6 +185,12 @@ MIT License
   <img src="联系我.png" width="200" alt="联系我">
 </div>
 
+## 请我抽包华子
+
+<div align="center">
+  <img src="请我抽包华子.jpg" width="200" alt="请我抽包华子">
+</div>
+
 ## 致谢
 
 - [faster-whisper](https://github.com/SYSTRAN/faster-whisper) — 高效 Whisper 推理
