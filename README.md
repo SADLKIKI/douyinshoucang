@@ -179,6 +179,12 @@ DOUYlike 的采集和转写模块参考了 [AI 内容罗盘 (DyD)](https://githu
 
 MIT License
 
+## 联系我
+
+<div align="center">
+  <img src="联系我.png" width="200" alt="联系我">
+</div>
+
 ## 致谢
 
 - [faster-whisper](https://github.com/SYSTRAN/faster-whisper) — 高效 Whisper 推理
